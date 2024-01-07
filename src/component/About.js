@@ -1,6 +1,5 @@
 import React,{useContext,useEffect} from 'react';
 
-
 const About = () => {
   return (
     <div className='my-2'>

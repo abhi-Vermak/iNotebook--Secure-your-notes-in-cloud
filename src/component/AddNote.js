@@ -1,18 +1,18 @@
 import React, { useContext, useState } from 'react';
 import Notes from "./Notes";
-// import noteContext from '../context/notes/NoteContext';
+import noteContext from '../context/note/NoteContext';
 
 function AddNote() {
-    // const context = useContext(noteContext);
-    // const {addNote} = context;
+    const context = useContext(noteContext);
+    const {addNote} = context;
 
-    // const handleClick =() =>{
-    //       console.log(addNote);
-    // }
+    const handleClick =() =>{
+          console.log(addNote);
+    }
 
-    // const onChange=(e) =>{
-    //   // SetNote({...note ,[e.target.name] : e.target.value})
-    // }
+    const onChange=(e) =>{
+      // SetNote({...note ,[e.target.name] : e.target.value})
+    }
   return (
     <div>
       <div className="container my-2">
