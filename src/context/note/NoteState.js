@@ -75,7 +75,7 @@ const NoteState = (props) => {
     const addNote =(note)=>{
       setNotes(notes.push(note))
     }
-
+   
     // Add a Note
     const deleteNote =(id)=>{
 
@@ -88,6 +88,7 @@ const NoteState = (props) => {
 
   return (
   <NoteContext.Provider  value={{notes, addNote, deleteNote , editNote}}>
+ 
    { props.children}
     </NoteContext.Provider>
   )

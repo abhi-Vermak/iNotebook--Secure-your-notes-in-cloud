@@ -9,7 +9,7 @@ import NoteState from "./context/note/NoteState";
 function App() {
   return (
     <>
-    {/* <NoteState> */}
+    <NoteState>
       <Router>
         <Navbar />
         <Alert/>
@@ -18,7 +18,7 @@ function App() {
           <Route path="/about" element={<About />}></Route>
         </Routes>
       </Router>
-    {/* </NoteState> */}
+    </NoteState>
     </>
   );
 }

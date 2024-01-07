@@ -6,12 +6,14 @@ function AddNote() {
     const context = useContext(noteContext);
     const {addNote} = context;
 
+    const[note,SetNote] = useState("")
+
     const handleClick =() =>{
           console.log(addNote);
     }
 
     const onChange=(e) =>{
-      // SetNote({...note ,[e.target.name] : e.target.value})
+      SetNote({...note ,[e.target.name] : e.target.value})
     }
   return (
     <div>
@@ -28,7 +30,7 @@ function AddNote() {
             id="title"
             name='title'
             aria-describedby="emailHelp"
-            // onChange={onChange}
+            onChange={onChange}
           />
           
 
@@ -49,11 +51,10 @@ function AddNote() {
             Check me out
           </label>
         </div>
-        <button type="submit" className="btn btn-primary" >
+        <button type="submit" className="btn btn-primary" onClick={handleClick} >
           Submit
         </button>
       </form>
-      <Notes/>
     </div>
     </div>
   )
